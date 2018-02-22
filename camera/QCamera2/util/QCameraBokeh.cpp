@@ -1,4 +1,4 @@
-/* Copyright (c) 2017, The Linux Foundation. All rights reserved.
+/* Copyright (c) 2017-2018, The Linux Foundation. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -195,7 +195,7 @@ int32_t QCameraBokeh::init(
     /* To dump debug data */
     char prop[PROPERTY_VALUE_MAX];
     memset(prop, 0, sizeof(prop));
-    property_get("persist.camera.bokeh.debug", prop, "0");
+    property_get("persist.vendor.camera.bokeh.debug", prop, "0");
     m_bDebug = atoi(prop);
 
     LOGH("X");
@@ -681,7 +681,7 @@ int32_t QCameraBokeh::doBokehProcess(
 
     uint8_t dualCamConfig = DUAL_CAM_CONFIG;
     memset(prop, 0, sizeof(prop));
-    property_get("persist.camera.ddm.config", prop, "");
+    property_get("persist.vendor.camera.ddm.config", prop, "");
     if (strlen(prop) > 0) {
         dualCamConfig = atoi(prop);
     }
@@ -692,7 +692,7 @@ int32_t QCameraBokeh::doBokehProcess(
         ddmMode = qrcp::DepthMapMode::NORMAL_MODE;
 
     memset(prop, 0, sizeof(prop));
-    property_get("persist.camera.bokeh.ddmmode", prop, "");
+    property_get("persist.vendor.camera.bokeh.ddmmode", prop, "");
     if (strlen(prop) > 0) {
         if (!strcmp(prop, "normal"))
             ddmMode = qrcp::DepthMapMode::NORMAL_MODE;
