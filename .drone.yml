@@ -14,11 +14,7 @@ steps:
   - repo init -u https://github.com/LineageOS/android.git -b lineage-16.0
   - repo sync
   - source build/envsetup.sh  
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  -   
-  
+  - curl https://raw.githubusercontent.com/vm03/android_device_yandex_Amber/lineage-16.0-ota-drone/test_manifest.xml  ~/android/lineage/.repo/local_manifests/test.xml
+  - repo sync
+  - brunch lineage_Amber-userdebug
+  - mka bootimage
