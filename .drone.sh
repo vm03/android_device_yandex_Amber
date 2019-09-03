@@ -11,4 +11,4 @@ mkdir -p ~/android/lineage/.repo/local_manifests/
 curl https://raw.githubusercontent.com/vm03/android_device_yandex_Amber/lineage-16.0-ota-drone/test_manifest.xml >  ~/android/lineage/.repo/local_manifests/test.xml
 ~/bin/repo sync -c -j 16
 source build/envsetup.sh
-brunch lineage_Amber-userdebug
+brunch lineage_Amber-userdebug > build_log.txt
