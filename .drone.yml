@@ -9,4 +9,5 @@ steps:
     DEBIAN_FRONTEND: noninteractive
   commands:
   - bash ./.drone.sh
-  - tail -300 build_log.txt
+  - cat build_log.txt | tail -300
+  - date
