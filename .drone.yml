@@ -3,6 +3,7 @@ name: recovery-test
 
 steps:
 - name: build
+  failure: ignore
   image: ubuntu:rolling
   environment:
     DEBIAN_FRONTEND: noninteractive
