@@ -14,3 +14,4 @@ source build/envsetup.sh
 lunch lineage_Amber-userdebug 2>&1 | tail -300
 mka bootimage 2>&1 | tail -300
 curl -T out/target/product/Amber/boot.img --user "$YAUSER:$YAPASS" https://webdav.yandex.ru/boot-`date +%Y%m%d`.img
+
