@@ -7,5 +7,9 @@ steps:
   image: ubuntu:rolling
   environment:
     DEBIAN_FRONTEND: noninteractive
+    YAUSER:
+      from_secret: YAUSER
+    YAPASS:
+      from_secret: YAPASS
   commands:
   - bash ./.drone.sh
