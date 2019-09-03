@@ -3,11 +3,15 @@ name: recovery-test
 
 steps:
 - name: build
-  failure: ignore
   image: ubuntu:rolling
   environment:
     DEBIAN_FRONTEND: noninteractive
   commands:
   - bash ./.drone.sh
+- name: show log
+  commands:
   - cat build_log.txt | tail -300
   - date
+  when:
+    status:
+    - failure
