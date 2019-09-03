@@ -3,4 +3,5 @@
   <project name="vm03/android_device_yandex_Amber" path="device/yandex/Amber" remote="github" revision="lineage-16.0-ota-drone" />
   <project name="DevelopedInside/android_kernel_yandex_sdm660" path="kernel/yandex/sdm660" remote="github" />
   <project name="DevelopedInside/proprietary_vendor_yandex" path="vendor/yandex/Amber" remote="github"  />
+  <project name="LineageOS/android_packages_resources_devicesettings" path="packages/resources/devicesettings" remote="github" />
 </manifest>
