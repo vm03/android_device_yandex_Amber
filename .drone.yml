@@ -9,7 +9,6 @@ steps:
   commands:
   - bash ./.drone.sh
 - name: show log
-  image: ubuntu:rolling
   commands:
   - cat build_log.txt | tail -300
   - date
