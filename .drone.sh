@@ -6,9 +6,9 @@ curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
 chmod a+x ~/bin/repo
 cd ~/android/lineage
 ~/bin/repo init -u https://github.com/LineageOS/android.git -b lineage-16.0 --depth=1
-~/bin/repo sync -c -j 16
+~/bin/repo sync -c -j 16 > build_log.txt
 mkdir -p ~/android/lineage/.repo/local_manifests/
 curl https://raw.githubusercontent.com/vm03/android_device_yandex_Amber/lineage-16.0-ota-drone/test_manifest.xml >  ~/android/lineage/.repo/local_manifests/test.xml
-~/bin/repo sync -c -j 16
+~/bin/repo sync -c -j 16 > build_log.txt
 source build/envsetup.sh
-brunch lineage_Amber-userdebug > build_log.txt
+brunch lineage_Amber-userdebug
