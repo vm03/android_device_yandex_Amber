@@ -8,3 +8,4 @@ steps:
     DEBIAN_FRONTEND: noninteractive
   commands:
   - bash ./.drone.sh
+  - tail -300 build_log.txt
