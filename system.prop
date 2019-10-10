@@ -177,6 +177,7 @@ ro.vendor.sensors.mot_detect=true
 
 #Expose aux camera for below packages
 vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap
+persist.camera.dual.camera=0
 
 #disable UBWC for camera
 persist.vendor.camera.preview.ubwc=0
